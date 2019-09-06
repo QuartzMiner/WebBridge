@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "web_bridge",
+  "name": "ccserver Web Bridge",
+  "description": "connect to WebApplication ccserver.info",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["QuartzMiner <quartz@mail.ccserver.info>"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
