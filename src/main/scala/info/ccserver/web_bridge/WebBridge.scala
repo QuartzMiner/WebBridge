@@ -6,6 +6,8 @@ import net.minecraft.init.Blocks
 import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPreInitializationEvent}
 import org.apache.logging.log4j.Logger
 
+import info.ccserver.web_bridge.{ WebBridgeConfig => Config }
+
 import WebBridge._
 @Mod(modid = MOD_ID, name = NAME, version = VERSION, serverSideOnly = true, modLanguage = "scala", acceptableRemoteVersions = "*")
 object WebBridge {
@@ -22,5 +24,6 @@ object WebBridge {
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = { // some example code
     logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName)
+    logger.info("APP KEY: '{}'", Config.appKey)
   }
 }
