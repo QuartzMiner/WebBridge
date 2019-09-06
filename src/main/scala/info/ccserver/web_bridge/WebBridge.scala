@@ -15,10 +15,11 @@ object WebBridge {
   final val NAME = "ccserver Web Bridge"
   final val VERSION = "0.1"
 
-  private var logger: Logger = _
+  private var _logger: Logger = _
+  def logger = _logger
 
   @EventHandler def preInit(event: FMLPreInitializationEvent): Unit = {
-    logger = event.getModLog
+    _logger = event.getModLog
   }
 
   @EventHandler
