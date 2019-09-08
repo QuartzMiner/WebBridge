@@ -1,7 +1,7 @@
 WebBridge
 =========
 
-ccserver.info WebアプリケーションとMinecraftを接続する bridge Mod
+[ccserver.info](https://github.com/QuartzMiner/ccserver.info) WebアプリケーションとMinecraftを接続する bridge Mod
 
 ```puml
 @startuml
