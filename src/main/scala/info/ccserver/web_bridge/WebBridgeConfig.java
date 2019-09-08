@@ -6,4 +6,5 @@ import net.minecraftforge.common.config.Config;
 public class WebBridgeConfig {
     public static String appKey = "app key";
     public static String webAppBase = "http://localhost:8000";
+    public static int modPort = 8092;
 }

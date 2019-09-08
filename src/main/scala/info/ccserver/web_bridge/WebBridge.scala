@@ -2,8 +2,7 @@ package info.ccserver.web_bridge
 
 import net.minecraftforge.fml.common.Mod
 import Mod.EventHandler
-import net.minecraft.init.Blocks
-import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPreInitializationEvent}
+import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPreInitializationEvent, FMLServerStartingEvent}
 import org.apache.logging.log4j.Logger
 
 import info.ccserver.web_bridge.{ WebBridgeConfig => Config }
@@ -23,8 +22,12 @@ object WebBridge {
   }
 
   @EventHandler
-  def init(event: FMLInitializationEvent): Unit = { // some example code
-    logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName)
-    logger.info("APP KEY: '{}'", Config.appKey)
+  def init(event: FMLInitializationEvent): Unit = {
+    Server.serve(Config.modPort)
+  }
+
+  @EventHandler
+  def serverLoad(event: FMLServerStartingEvent): Unit = {
+    event.registerServerCommand(CommandAuth)
   }
 }
